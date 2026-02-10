@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: redpanda-nodeport
+spec:
+  selector:
+    app: redpanda
+  ports:
+    - protocol: TCP
+      port: 9092        # Internal port
+      targetPort: 9092  # Container port
+      nodePort: 30092   # External port (accessible via Minikube) # exports it to outside the cluster
+  type: NodePort       # Expose via NodePort

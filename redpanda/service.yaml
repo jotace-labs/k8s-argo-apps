@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: redpanda
+spec:
+  selector:
+    app: redpanda
+  ports:
+    - name: kafka
+      protocol: TCP
+      port: 9092 # port exposed within the cluster
+      targetPort: 9092 # container port where redpanda is listening
+    - name: admin
+      protocol: TCP
+      port: 9644
+      targetPort: 9644
+  type: ClusterIP
