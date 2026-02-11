@@ -33,3 +33,10 @@ spec:
               name: kafka
             - containerPort: 9644
               name: admin
+          volumeMounts:
+            - name: redpanda-data
+              mountPath: /var/lib/redpanda/data
+      volumes:
+        - name: redpanda-data
+          persistentVolumeClaim:
+            claimName: redpanda-data
