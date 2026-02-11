@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: my-consumer
-          image: my-consumer:0.1.0
+          image: ghcr.io/jotace-labs/my-consumer:a77ab52
           imagePullPolicy: IfNotPresent
           env:
             - name: KAFKA_BROKERS
