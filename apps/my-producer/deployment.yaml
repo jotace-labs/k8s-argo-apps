@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: my-producer
-          image: ghcr.io/jotace-labs/my-producer:9c11535
+          image: ghcr.io/jotace-labs/my-producer:a08310a 
           imagePullPolicy: IfNotPresent
           env:
             - name: KAFKA_BROKERS
