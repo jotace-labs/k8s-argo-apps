@@ -20,6 +20,6 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
             - name: KAFKA_BROKERS
-              value: "redpanda.default.svc.cluster.local:9092"
+              value: "dev-redpanda.dev.svc.cluster.local:9092"
             - name: MONGOURI
               value: "mongodb+srv://root:password@my-mongodb.default.svc.cluster.local/messages_db?authSource=admin&tls=false"

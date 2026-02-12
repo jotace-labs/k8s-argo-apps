@@ -27,4 +27,4 @@ spec:
           #     cpu: "200m"
           env:
             - name: KAFKA_BROKERS
-              value: "redpanda.default.svc.cluster.local:9092"
+              value: "dev-redpanda.dev.svc.cluster.local:9092"
