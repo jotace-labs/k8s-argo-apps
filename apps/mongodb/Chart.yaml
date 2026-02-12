@@ -1,0 +1,8 @@
+apiVersion: v2
+name: my-mongodb
+description: MongoDB (Bitnami) for k8s-argo-apps
+version: 0.1.0
+dependencies:
+  - name: mongodb
+    repository: https://charts.bitnami.com/bitnami
+    version: "17.x.x"

@@ -1,0 +1,27 @@
+mongodb:
+  # Authentication
+  auth:
+    enabled: true
+    rootUser: root
+    rootPassword: password
+    usernames:
+      - root
+    passwords:
+      - password
+    databases:
+      - my_db
+
+  # persistent storage
+  persistence:
+    enabled: true
+    size: 5Gi
+
+  architecture: standalone
+  replicaCount: 1
+
+  service:
+    type: NodePort
+    ports:
+      mongodb: 27017 # in-cluster (pods) reach
+    nodePorts:
+      mongodb: 30100 # outside cluster (node) reach
